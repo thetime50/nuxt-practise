@@ -194,3 +194,25 @@ yarn add -D sass sass-loader@10 fibers
 Nuxt.js 会根据扩展名自动猜测文件类型，并为 webpack 使用适当的预处理器加载器。如果您需要使用它们，您仍然需要安装所需的加载程序。
 
 
+## 路由
+### 路由重定向问题
+[在nuxt中使用路由重定向](https://blog.csdn.net/HermitSun/article/details/105026394)
+使用中间页面 + syncData() contex.redirect() 
+```html
+<template>
+  
+</template>
+<script>
+export default {
+  asyncData({ redirect }) {
+    redirect('/path/to')
+  }
+}
+</script>
+```
+或者使用中间件处理
+
+## todo
+https://zh.nuxtjs.org/docs/2.x/get-started/routing/  
+https://www.nuxtjs.cn/guide/installation  
+部署到服务器  

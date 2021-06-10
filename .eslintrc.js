@@ -14,5 +14,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    // 'vue/html-indent': ['warn', 4],
+    // indent: ['error', 4],
+    'comma-dangle': ['error', 'only-multiline']
+  },
 }

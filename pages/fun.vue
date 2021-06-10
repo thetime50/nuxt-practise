@@ -14,7 +14,10 @@ export default {
   name: 'Fun',
 
   data () {
-    return {}
+    return {
+      a: { b: 123 },
+      c: { d: 666, e: 'fff' },
+    }
   },
 }
 </script>

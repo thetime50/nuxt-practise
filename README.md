@@ -130,12 +130,14 @@ module.exports = {
     "explorer.confirmDelete": false,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "eslint.options": { //指定eslint配置文件位置
-        "configFile": ".eslintrc.js" //指定项目根目录中的eslint配置文件
-    },
+    // 不需要配置能够自动识别到
+    // "eslint.options": { //指定eslint配置文件位置
+    //     "configFile": ".eslintrc.js" //指定项目根目录中的eslint配置文件
+    // },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     }, //保存自动修复eslint错误
+    // 不需要配置能够自动识别到
     "eslint.validate": [
         "javascript",
         "javascriptreact",

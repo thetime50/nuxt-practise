@@ -1,6 +1,9 @@
 <template>
   <div class="component-fun">
     hello
+    <div class="title">
+      title
+    </div>
   </div>
 </template>
 
@@ -15,11 +18,17 @@ export default {
   },
 }
 </script>
-
 <style scoped>
-/*  rel="stylesheet/scss" lang="scss" */
 
-/* .component-fun{
+div { color: #aaf; }
+</style>
+<style lang="scss" scoped>
+div {
+  color: #faa;
 
-} */
+  .title {
+    background: #dff;
+  }
+  div { color: #aaf; }
+}
 </style>

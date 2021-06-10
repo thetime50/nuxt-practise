@@ -66,6 +66,8 @@ create-nuxt-app v3.6.0
 https://eslint.vuejs.org/  
 https://eslint.org/docs/developer-guide/working-with-rules
 
+file: .eslintrc.js
+
 在vue/cli中初始化项目使用不同eslint配置  
 
 ### 扩展配置 extends  
@@ -116,7 +118,12 @@ module.exports = {
 }
 ```
 
-**vscode 配置**
+// todo 两种区别
+
+### vscode 配置
+
+使用插件[eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
 ```json
 // setting.json
 {
@@ -141,3 +148,47 @@ module.exports = {
 ```
 
 [详解VSCode 格式化不符合预期的问题](https://zhuanlan.zhihu.com/p/103492877)
+
+
+## stylelint
+https://stylelint.io/user-guide/configuration  
+
+file: stylelint.config.js
+
+- [无法在stylelint中设置block-no-empty为false](https://www.656463.com/wenda/wfzstylelintzszblocknoemptywfals_390)  
+  使用null配置关闭规则
+
+## vscode 配置
+
+[ESlint + Stylelint + VSCode自动格式化代码(2020)](https://zhuanlan.zhihu.com/p/94175872)  
+sass的link和格式化好像不用特殊设置  
+使用插件[stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+为了防止编辑器内置 linters [css] [less] [scss]和此扩展程序[stylelint]报告与屏幕截图中基本相同的错误，请禁用用户或工作区设置中的内置错误
+
+```json
+// setting.json
+{
+"css.validate": false,
+"less.validate": false,
+"scss.validate": false,
+
+// "stylelint.configFile":"stylelint.config.js", // 设置配置文件路径 // 这项配置不需要 会自动匹配文件
+"editor.codeActionsOnSave": { // 自动修复可能的问题
+    "source.fixAll.stylelint": true
+  }
+}
+```
+
+## sass
+https://zh.nuxtjs.org/docs/2.x/directory-structure/assets/#sass
+
+使用&lt;style lang="scss"> 和 &lt;style lang="sass"> 效果是不同的
+
+```cmd
+yarn add -D sass sass-loader@10 fibers
+```
+
+Nuxt.js 会根据扩展名自动猜测文件类型，并为 webpack 使用适当的预处理器加载器。如果您需要使用它们，您仍然需要安装所需的加载程序。
+
+
